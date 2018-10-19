@@ -13,6 +13,7 @@
 		C640C22921797AC100479132 /* InstagramApiPrc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C640C22721797AC100479132 /* InstagramApiPrc.xcdatamodeld */; };
 		C640C22B21797AC200479132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C640C22A21797AC200479132 /* Assets.xcassets */; };
 		C640C22E21797AC200479132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C640C22C21797AC200479132 /* LaunchScreen.storyboard */; };
+		C640C27B2179D8EB00479132 /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640C27A2179D8EB00479132 /* InstagramAuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C640C22A21797AC200479132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C640C22D21797AC200479132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C640C22F21797AC200479132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C640C27A2179D8EB00479132 /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C640C22021797AC100479132 /* AppDelegate.swift */,
 				C640C22221797AC100479132 /* ViewController.swift */,
+				C640C27A2179D8EB00479132 /* InstagramAuthViewController.swift */,
 				C640C22421797AC100479132 /* Main.storyboard */,
 				C640C22A21797AC200479132 /* Assets.xcassets */,
 				C640C22C21797AC200479132 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C640C22321797AC100479132 /* ViewController.swift in Sources */,
+				C640C27B2179D8EB00479132 /* InstagramAuthViewController.swift in Sources */,
 				C640C22121797AC100479132 /* AppDelegate.swift in Sources */,
 				C640C22921797AC100479132 /* InstagramApiPrc.xcdatamodeld in Sources */,
 			);
