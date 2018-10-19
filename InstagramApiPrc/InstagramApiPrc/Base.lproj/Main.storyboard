@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,25 +49,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-Kc-vBP">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K43-gz-UYq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D5T-Cw-xkP"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="M1l-vO-jxq"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-b4-4SY">
+                                <rect key="frame" x="12" y="24.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k2v-b4-4SY" secondAttribute="height" id="ahZ-hF-Zgk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="cross_Button.png"/>
                                 <connections>
-                                    <outlet property="delegate" destination="fLB-2g-m2X" id="uXX-vO-pCw"/>
+                                    <action selector="touchinsideNavXButtom" destination="fLB-2g-m2X" eventType="touchUpInside" id="9qT-0f-foI"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-u6-xkg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fLB-2g-m2X" id="mep-Kk-nE1"/>
                                 </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XQj-au-rym" firstAttribute="bottom" secondItem="Aeo-Kc-vBP" secondAttribute="bottom" id="6H8-pM-jp3"/>
-                            <constraint firstItem="Aeo-Kc-vBP" firstAttribute="leading" secondItem="XQj-au-rym" secondAttribute="leading" id="6iw-x0-abK"/>
-                            <constraint firstItem="Aeo-Kc-vBP" firstAttribute="width" secondItem="Spk-aZ-dBL" secondAttribute="width" id="Fru-Bq-o2m"/>
-                            <constraint firstItem="Aeo-Kc-vBP" firstAttribute="top" secondItem="XQj-au-rym" secondAttribute="top" id="lAt-dC-L9P"/>
+                            <constraint firstItem="XQj-au-rym" firstAttribute="bottom" secondItem="rSy-u6-xkg" secondAttribute="bottom" id="3Hg-E2-93x"/>
+                            <constraint firstItem="K43-gz-UYq" firstAttribute="top" secondItem="XQj-au-rym" secondAttribute="top" id="5ng-SV-lni"/>
+                            <constraint firstItem="K43-gz-UYq" firstAttribute="leading" secondItem="XQj-au-rym" secondAttribute="leading" id="99e-Ga-aoC"/>
+                            <constraint firstItem="rSy-u6-xkg" firstAttribute="leading" secondItem="XQj-au-rym" secondAttribute="leading" id="N7a-7W-Y96"/>
+                            <constraint firstItem="K43-gz-UYq" firstAttribute="width" secondItem="Spk-aZ-dBL" secondAttribute="width" id="PKW-ZX-gZ1"/>
+                            <constraint firstItem="k2v-b4-4SY" firstAttribute="height" secondItem="K43-gz-UYq" secondAttribute="height" multiplier="0.8" id="RQG-XM-OoO"/>
+                            <constraint firstItem="k2v-b4-4SY" firstAttribute="centerY" secondItem="K43-gz-UYq" secondAttribute="centerY" id="XsM-B6-cza"/>
+                            <constraint firstItem="k2v-b4-4SY" firstAttribute="leading" secondItem="K43-gz-UYq" secondAttribute="leading" constant="12" id="igT-Cm-F4f"/>
+                            <constraint firstItem="rSy-u6-xkg" firstAttribute="width" secondItem="Spk-aZ-dBL" secondAttribute="width" id="kTV-Oz-NQL"/>
+                            <constraint firstItem="rSy-u6-xkg" firstAttribute="top" secondItem="K43-gz-UYq" secondAttribute="bottom" id="urA-aW-pH0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XQj-au-rym"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="Aeo-Kc-vBP" id="gi8-OQ-ADV"/>
+                        <outlet property="navagateBar" destination="K43-gz-UYq" id="SLn-Ap-Ufp"/>
+                        <outlet property="webView" destination="rSy-u6-xkg" id="qEe-wv-HNe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUg-cL-TtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -73,4 +102,7 @@
             <point key="canvasLocation" x="925.60000000000002" y="-206.44677661169416"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cross_Button.png" width="128" height="128"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 struct API{
     static let INSTAGRAM_AUTHURL = "https://api.instagram.com/oauth/authorize/"
@@ -23,6 +24,7 @@ protocol InstaAuthDelegate {
 
 class InstagramAuthViewController: UIViewController {
     
+    @IBOutlet weak var navagateBar: UINavigationBar!
     @IBOutlet weak var webView: UIWebView!
     
     var delegate:InstaAuthDelegate!
@@ -37,13 +39,14 @@ class InstagramAuthViewController: UIViewController {
         self.testSession()
     }
     
+    @IBAction func touchinsideNavXButtom() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func testSession() {
-        
         let authURL = String(format: "%@?client_id=%@&redirect_uri=%@&response_type=token&scope=%@", arguments: [API.INSTAGRAM_AUTHURL,API.INSTAGRAM_CLIENT_ID,API.INSTAGRAM_REDIRECT_URI,API.INSTAGRAM_SCOPE])
         let urlRequest = URLRequest.init(url: URL.init(string: authURL)!)
         webView.loadRequest(urlRequest)
-        
-        
     }
     
     func checkRequestForCallbackURL(request: URLRequest) -> Bool {
@@ -66,5 +69,12 @@ class InstagramAuthViewController: UIViewController {
 extension InstagramAuthViewController: UIWebViewDelegate{
     func webView(_ webView: UIWebView, shouldStartLoadWith request:URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
         return checkRequestForCallbackURL(request: request)
+    }
+}
+extension InstagramAuthViewController: WKNavigationDelegate{
+    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
+        print("michael check")
+        checkRequestForCallbackURL(request: navigationAction.request)
+        
     }
 }

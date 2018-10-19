@@ -14,6 +14,7 @@
 		C640C22B21797AC200479132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C640C22A21797AC200479132 /* Assets.xcassets */; };
 		C640C22E21797AC200479132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C640C22C21797AC200479132 /* LaunchScreen.storyboard */; };
 		C640C27B2179D8EB00479132 /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640C27A2179D8EB00479132 /* InstagramAuthViewController.swift */; };
+		C640C27E217A073400479132 /* cross_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C640C27D217A073400479132 /* cross_Button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C640C22D21797AC200479132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C640C22F21797AC200479132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C640C27A2179D8EB00479132 /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
+		C640C27D217A073400479132 /* cross_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross_Button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,17 @@
 				C640C22C21797AC200479132 /* LaunchScreen.storyboard */,
 				C640C22F21797AC200479132 /* Info.plist */,
 				C640C22721797AC100479132 /* InstagramApiPrc.xcdatamodeld */,
+				C640C27C217A072400479132 /* Resource */,
 			);
 			path = InstagramApiPrc;
+			sourceTree = "<group>";
+		};
+		C640C27C217A072400479132 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C640C27D217A073400479132 /* cross_Button.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 			files = (
 				C640C22E21797AC200479132 /* LaunchScreen.storyboard in Resources */,
 				C640C22B21797AC200479132 /* Assets.xcassets in Resources */,
+				C640C27E217A073400479132 /* cross_Button.png in Resources */,
 				C640C22621797AC100479132 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
